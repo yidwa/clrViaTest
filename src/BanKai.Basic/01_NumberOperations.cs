@@ -164,7 +164,7 @@ namespace BanKai.Basic
             int prefixIncrementalReturnValue = ++numberToIncrement;
 
             // change "default(int)" to correct value.
-            const int expectedResult = default(int);
+            const int expectedResult = 2;
 
             Assert.Equal(expectedResult, prefixIncrementalReturnValue);
         }
@@ -176,7 +176,7 @@ namespace BanKai.Basic
             int denominator = 0;
 
             // change "typeof(ArgumentException)" to correct exception type.
-            Type desiredExceptionType = typeof(ArgumentException);
+            Type desiredExceptionType = typeof(DivideByZeroException);
 
             Assert.NotEqual(typeof(ArithmeticException), desiredExceptionType);
             Assert.NotEqual(typeof(SystemException), desiredExceptionType);
@@ -191,7 +191,7 @@ namespace BanKai.Basic
             --minimumValue;
 
             // change "default(int)" to correct value.
-            const int expectedResult = default(int);
+            const int expectedResult = int.MaxValue;
 
             Assert.Equal(expectedResult, minimumValue);
         }
@@ -202,7 +202,7 @@ namespace BanKai.Basic
             int minimumValue = int.MinValue;
 
             // change "typeof(ArgumentException)" to correct exception type.
-            Type desiredExceptionType = typeof(ArgumentException);
+            Type desiredExceptionType = typeof(OverflowException);
 
             Assert.NotEqual(typeof(ArithmeticException), desiredExceptionType);
             Assert.NotEqual(typeof(SystemException), desiredExceptionType);
@@ -215,7 +215,7 @@ namespace BanKai.Basic
         public void should_do_complement_operation()
         {
             // change "default(int)" to correct value. You should use Hex representation.
-            const int expectedResult = default (int);
+            const int expectedResult = 0;
 
             Assert.Equal(expectedResult, ~0xf);
         }
