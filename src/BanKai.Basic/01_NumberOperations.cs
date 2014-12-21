@@ -215,7 +215,8 @@ namespace BanKai.Basic
         public void should_do_complement_operation()
         {
             // change "default(int)" to correct value. You should use Hex representation.
-            const int expectedResult = 0;
+            // ???  -0x10
+            const int expectedResult = default(int);
 
             Assert.Equal(expectedResult, ~0xf);
         }
@@ -224,7 +225,9 @@ namespace BanKai.Basic
         public void should_do_and_operation()
         {
             // change "default(int)" to correct value. You should use Hex representation.
-            const int expectedResult = default(int);
+
+            // 0xf0  11110000, 0x33 00110011 
+            const int expectedResult = 0x30;
 
             Assert.Equal(expectedResult, (0xf0 & 0x33));
         }
@@ -233,7 +236,9 @@ namespace BanKai.Basic
         public void should_do_or_operation()
         {
             // change "default(int)" to correct value. You should use Hex representation.
-            const int expectedResult = default(int);
+           
+            // 0xf0 11110000 , 0xf3 11110011 
+            const int expectedResult = 0xf3;
 
             Assert.Equal(expectedResult, (0xf0 | 0x33));
         }
@@ -242,7 +247,7 @@ namespace BanKai.Basic
         public void should_do_exclusive_or_operation()
         {
             // change "default(int)" to correct value. You should use Hex representation.
-            const int expectedResult = default(int);
+            const int expectedResult = 0xf0f0;
 
             Assert.Equal(expectedResult, (0xff00 ^ 0x0ff0));
         }
@@ -251,7 +256,7 @@ namespace BanKai.Basic
         public void should_do_shift_left_operation()
         {
             // change "default(int)" to correct value. You should use Hex representation.
-            const int expectedResult = default(int);
+            const int expectedResult = 0x80;
 
             Assert.Equal(expectedResult, (0x20 << 2));
         }
@@ -260,7 +265,7 @@ namespace BanKai.Basic
         public void should_do_shift_right_operation()
         {
             // change "default(int)" to correct value. You should use Hex representation.
-            const int expectedResult = default(int);
+            const int expectedResult = 0x10;
 
             Assert.Equal(expectedResult, (0x20 >> 1));
         }
@@ -273,7 +278,9 @@ namespace BanKai.Basic
             Type arithmeticOperatorResultType = (shortNumber + anotherShortNumber).GetType();
 
             // change "typeof(short)" to correct type.
-            Type expectedResult = typeof(short);
+
+            // to avoid the situation of overflow
+            Type expectedResult = typeof(int);
 
             Assert.Equal(expectedResult, arithmeticOperatorResultType);
         }
@@ -285,7 +292,9 @@ namespace BanKai.Basic
             const double denominator = 0.0;
 
             // change "default(double)" to correct value.
-            const double expectedResult = default(double);
+
+            //less precesion, the divided number is not zero
+            const double expectedResult = double.PositiveInfinity;
 
             Assert.Equal(expectedResult, (numerator / denominator));
         }
@@ -296,7 +305,8 @@ namespace BanKai.Basic
             const double numerator = 0;
             const double denominator = 0;
 
-            const double expectedResult = default(double);
+            // when the devider is 0 with type double, and the devided number is 0 with type double, the result is NaN
+            const double expectedResult = double.NaN;
 
             Assert.Equal(expectedResult, (numerator / denominator));
         }
