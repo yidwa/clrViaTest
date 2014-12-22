@@ -86,7 +86,7 @@ namespace BanKai.Basic
             var parsedBottomEnumValue = (BorderSide)Enum.Parse(typeof(BorderSide), "Bottom");
 
             // change the variable value to fix the test.
-            const BorderSide expectedEnumValue = BorderSide.Left;
+            const BorderSide expectedEnumValue = BorderSide.Bottom;
 
             Assert.Equal(expectedEnumValue, parsedBottomEnumValue);
         }
@@ -97,7 +97,7 @@ namespace BanKai.Basic
             var parsedBottomEnumValue = (BorderSide)Enum.Parse(typeof(BorderSide), "3");
 
             // change the variable value to fix the test.
-            const BorderSide expectedEnumValue = BorderSide.Left;
+            const BorderSide expectedEnumValue = BorderSide.Bottom;
 
             Assert.Equal(expectedEnumValue, parsedBottomEnumValue);
         }
@@ -110,7 +110,7 @@ namespace BanKai.Basic
             const bool includeLeft = (leftAndRight & BorderSideFlag.Left) != 0;
             
             // change the variable value to fix the test.
-            const bool expectedIncludeLeft = false;
+            const bool expectedIncludeLeft = true;
 
             Assert.Equal(expectedIncludeLeft, includeLeft);
         }

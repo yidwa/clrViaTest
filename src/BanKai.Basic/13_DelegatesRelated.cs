@@ -30,7 +30,7 @@ namespace BanKai.Basic
             TransformerDelegateDemo transformer = EquivalentTransformation;
 
             // change variable value to fix test.
-            const string expectedDelegateType = "";
+            const string expectedDelegateType = "TransformerDelegateDemo";
 
             Assert.Equal(expectedDelegateType, typeof(TransformerDelegateDemo).Name);
             Assert.True(transformer is Delegate);
@@ -44,7 +44,7 @@ namespace BanKai.Basic
             int transformResult = transformer(2);
 
             // change variable value to fix test.
-            const int expectedResult = default(int);
+            const int expectedResult = 2;
 
             Assert.Equal(expectedResult, transformResult);
         }
@@ -57,7 +57,7 @@ namespace BanKai.Basic
             int actualResult = PassingDelegateAsArgument(transformer);
 
             // change variable value to fix test.
-            const int expectedResult = default(int);
+            const int expectedResult = 5;
 
             Assert.Equal(expectedResult, actualResult);
         }
@@ -73,7 +73,7 @@ namespace BanKai.Basic
             theDelegate();
 
             // change variable value to fix test.
-            var expectedTrace = new string[] {};
+            var expectedTrace = new string[] { "MulticastDelegateDemoClass.OneMethod() called","MulticastDelegateDemoClass.AnotherMethod() called"};
 
             Assert.Equal(expectedTrace, demoObject.Trace);
         }
@@ -90,7 +90,7 @@ namespace BanKai.Basic
             theDelegate();
 
             // change variable value to fix test.
-            var expectedTrace = new string[] { };
+            var expectedTrace = new string[] { "MulticastDelegateDemoClass.AnotherMethod() called" };
 
             Assert.Equal(expectedTrace, demoObject.Trace);
         }
