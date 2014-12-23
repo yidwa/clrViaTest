@@ -36,7 +36,7 @@ namespace BanKai.Basic
                 new[] {typeof(string)});
 
             // change the variable value to fix the test.
-            const bool expectedHasWriteMethod = true;
+            const bool expectedHasWriteMethod = false;
 
             Assert.Equal(expectedHasWriteMethod, hasWriteMethod);
         }
@@ -51,7 +51,9 @@ namespace BanKai.Basic
             var readResult = readOnlyStreamWithWriteExplicitlyImpl.Read();
 
             // change the variable value to fix the test.
-            const string expectedReadResult = "";
+
+            // does it the same with implementation the write method with keyword public 
+            const string expectedReadResult = "Hehe";
 
             Assert.Equal(expectedReadResult, readResult);
         }

@@ -127,7 +127,7 @@ namespace BanKai.Basic
             // change "default(int)" to correct value.
 
             // less precision when cast int to float
-            const int expectedResult = 10000000;
+            const int expectedResult = 100000000;
 
             Assert.Equal(expectedResult, castedBackNumber);
         }

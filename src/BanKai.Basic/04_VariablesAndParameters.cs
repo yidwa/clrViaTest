@@ -100,7 +100,7 @@ namespace BanKai.Basic
             FunctionPassingOutIntAsArgument(out passingInt);
 
             // change the variable value to correct one
-            const int expectedResult = default(int);
+            const int expectedResult = 2;
 
             Assert.Equal(expectedResult, passingInt);
         }
@@ -114,7 +114,7 @@ namespace BanKai.Basic
                 FunctionPassingOutRefTypeClassAsArgument(out refTypeObject);
             
             // change the variable value to correct one
-            object expectedResult = default(object);
+            object expectedResult = modifiedRefTypeObject;
 
             Assert.Equal(expectedResult, refTypeObject);
         }
