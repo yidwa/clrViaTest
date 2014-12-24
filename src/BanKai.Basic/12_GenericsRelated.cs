@@ -16,8 +16,7 @@ namespace BanKai.Basic
 
             // correct the variable value to fix the test
 
-            // ? ? ?
-            Type expectedValuePropertyType = typeof(object);
+            Type expectedValuePropertyType = typeof(string);
 
             Assert.Equal(expectedValuePropertyType, valuePropertyType);
         }

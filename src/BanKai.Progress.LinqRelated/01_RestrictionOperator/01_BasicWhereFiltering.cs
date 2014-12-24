@@ -19,7 +19,14 @@ namespace BanKai.Progress.LinqRelated
             // Please delete the return statement and write your implementation here.
             // You are allowed to write just one line of code here (a line of code is
             // a statment ended with comma).
-            return employees;
+ 
+            foreach (Employee e in employees)
+            {
+                if (e.FullName.StartsWith("U"))
+                    yield return e;
+            }
+            yield break;
+           
         }
 
         private void CheckResult(IEnumerable<Employee> yourResult)

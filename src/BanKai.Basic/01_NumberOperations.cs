@@ -33,7 +33,6 @@ namespace BanKai.Basic
         {
             // change "typeof(string)" to correct type.
             
-            // ? why fload doesn't work?
             Type guessTheType = typeof (double);
 
             Assert.Equal(guessTheType, 1.0.GetType());
@@ -45,7 +44,6 @@ namespace BanKai.Basic
         {
             // change "typeof(string)" to correct type.
 
-            //  Int16, Int32(int), Int64?
             Type guessTheType = typeof (int);
 
             Assert.Equal(guessTheType, 1.GetType());
@@ -215,7 +213,7 @@ namespace BanKai.Basic
         public void should_do_complement_operation()
         {
             // change "default(int)" to correct value. You should use Hex representation.
-            // ???  -0x10
+            // ???  ~15 = -16?
             const int expectedResult = default(int);
 
             Assert.Equal(expectedResult, ~0xf);

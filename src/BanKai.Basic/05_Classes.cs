@@ -58,7 +58,6 @@ namespace BanKai.Basic
 
             // change variable value to correct one.
 
-            // \r\n  a new line
             const string expectedSequence = "Ctor()\r\nCtor(string)\r\n";
 
             Assert.Equal(expectedSequence, constructorCallSequence);
