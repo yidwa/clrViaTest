@@ -117,7 +117,6 @@ namespace BanKai.Basic
 
             // change the variable values for the following 3 lines to fix the test.
 
-            // ? cast, typeof
             Type expectedType = typeof(int);
             const bool isBoxedTypeSealed = true;
             const bool isValueType = true;
@@ -163,7 +162,6 @@ namespace BanKai.Basic
             Type type = castedToBaseClass.GetType();
 
             // change the variable value to fix the test.
-            // ? ? ?
             Type expectedType = typeof(InheritMemberAccessDemoClass);
 
             Assert.Equal(expectedType, type);

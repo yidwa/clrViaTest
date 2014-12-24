@@ -36,7 +36,7 @@ namespace BanKai.Basic
                 new[] {typeof(string)});
 
             // change the variable value to fix the test.
-            const bool expectedHasWriteMethod = false;
+            const bool expectedHasWriteMethod = true;
 
             Assert.Equal(expectedHasWriteMethod, hasWriteMethod);
         }
