@@ -106,7 +106,7 @@ namespace BanKai.Basic
             theDelegate += demoObject.AnotherMethod;
 
             // change variable value to fix test.
-            const bool areReferenceEqual = true;
+            const bool areReferenceEqual = false;
 
             Assert.Equal(areReferenceEqual, ReferenceEquals(theDelegate, copy));
         }
@@ -124,7 +124,7 @@ namespace BanKai.Basic
 
             // change variable value to fix test.
             // ?
-            const string expectedOutput = null;
+            const string expectedOutput = "A,B,C";
 
             Assert.Equal(expectedOutput, demoObject.ToString());
         }
@@ -156,7 +156,7 @@ namespace BanKai.Basic
             object returnedValue = delegateReturnsObject();
 
             // change variable value to fix test.
-            object expectedValue = null;
+            object expectedValue = "Hello";
 
             Assert.Equal(expectedValue, returnedValue);
         }
@@ -172,7 +172,7 @@ namespace BanKai.Basic
             string returnedValue = delegateAcceptsString("Good");
 
             // change variable value to fix test.
-            const string expectedValue = null;
+            const string expectedValue = "Good";
 
             Assert.Equal(expectedValue, returnedValue);
         }

@@ -25,7 +25,6 @@ namespace BanKai.Progress.LinqRelated
                 if (e.FullName.StartsWith("U"))
                     yield return e;
             }
-            yield break;
            
         }
 

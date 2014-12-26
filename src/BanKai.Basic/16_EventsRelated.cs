@@ -44,7 +44,7 @@ namespace BanKai.Basic
             demoObject.TriggerEvent();
 
             // change the variable value to fix the test.
-            const bool expectedIsEventCalled = true;
+            const bool expectedIsEventCalled = false;
 
             Assert.Equal(expectedIsEventCalled, eventIsCalled);
         }
@@ -65,7 +65,7 @@ namespace BanKai.Basic
             demoObject.Greet("World");
 
             // change the variable value to fix the test.
-            const string expectedContent = "World";
+            const string expectedContent = "Hello World";
 
             Assert.Equal(expectedContent, greetingContent);
         }
